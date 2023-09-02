@@ -1,14 +1,11 @@
-function getPromise<T extends (string | number)[]>(): Promise<T> {
+function getPromise(): Promise<(string | number)[]> {
   return new Promise((resolve) => {
-    resolve(["Text", 50] as T);
+    resolve(["Text", 50]);
   });
 }
 
-getPromise<string[]>().then((data) => {
+getPromise().then((data) => {
   console.log(data);
 });
 
-getPromise<number[]>().then((data) => {
-  console.log(data);
-});
 export {};
