@@ -6,8 +6,6 @@ type User = {
 };
 
 function createOrUpdateUser(initialValues: Partial<User>) {
-  name: "";
-  surname: "";
   email: "";
   password: "";
 }
